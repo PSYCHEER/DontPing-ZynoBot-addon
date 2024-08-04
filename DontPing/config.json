@@ -1,0 +1,10 @@
+{
+    "license": "PUT_YOUR_LICENSE_HERE",
+    "channels": 
+    [
+        "0000000000000000000",
+        "0000000000000000000"
+    ],
+    "deleteping": "true",
+    "warnmessage": "{MENTION} do not ping the staff!"
+}
