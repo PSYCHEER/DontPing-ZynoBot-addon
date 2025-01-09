@@ -16,12 +16,6 @@ function wait(ms){
 addon.once('ready', async () => {
 
     restrictedChannels = functions.channels;
-    try{
-        await functions.license();
-    } catch(err){
-        return process.exit();
-    }
-
     const events = addon.createEventListener();
 
     events.on('message', async msg => {
@@ -44,7 +38,7 @@ addon.once('ready', async () => {
                 }
                     this.warning = functions.warnmessage.replace(/{MENTION}/, `<@!${msg.author.id}>`);
                     await wait(2e2);
-                    msg.channel.send(this.warning).catch(err => {});
+                    msg.channel.send(this.warning).catch(err => {console.error(err)});
                }
         }
     });
